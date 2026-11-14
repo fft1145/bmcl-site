@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMCL — 本地运行的 Minecraft 启动器 | FFT STUDIO</title>
+<meta name="description" content="BMCL（fft1145）是一款基于 PCL2 交互思路的 Minecraft 启动器：完全本地运行，不需要自建服务器；从 GitHub 安全更新，只覆盖启动器文件，绝不碰游戏文件。">
+<link rel="canonical" href="https://bmcl26.netlify.app/">
+<meta property="og:url" content="https://bmcl26.netlify.app/">
+<meta name="theme-color" content="#111111">
+<link rel="icon" type="image/png" href="assets/bmcl-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#overview">跳到主要内容</a>
+
+<!-- ====== Header ====== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#overview" aria-label="BMCL 首页">
+      <img class="brand-icon" src="assets/bmcl-icon.png" alt="" width="30" height="30">
+      <span class="brand-text">
+        BMCL
+        <span class="brand-sub">FFT STUDIO</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#overview">概览</a>
+      <a href="#features">特性</a>
+      <a href="#security">安全</a>
+      <a href="#download">下载</a>
+      <a href="#changelog">日志</a>
+      <a href="https://fgame-faq26.netlify.app" target="_blank" rel="noopener">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-sm btn-outline" href="https://github.com/fft1145/BMCL/releases/latest/download/Better-MC-Launcher.exe" target="_blank" rel="noopener">下载最新版</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ====== Hero ====== -->
+  <section class="hero" id="overview">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span>FFT STUDIO · MINECRAFT LAUNCHER</p>
+        <div class="hero-title-row">
+          <h1 class="hero-title">BMCL</h1>
+          <span class="version-chip"><span class="chip-dot" aria-hidden="true"></span>fft1145</span>
+        </div>
+        <p class="hero-tagline">本地运行 <span aria-hidden="true">·</span> 安全更新 <span aria-hidden="true">·</span> 不碰游戏文件</p>
+        <p class="hero-lead">
+          基于 PCL2 交互思路的 Minecraft 启动器，项目代号 <code>fft1145</code>，窗口标题为
+          <code>BMCL</code>。完全本地运行，不需要自建服务器；版本、资源、登录与游戏目录，都留在你自己的电脑上。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://github.com/fft1145/BMCL/releases/latest/download/Better-MC-Launcher.exe" target="_blank" rel="noopener">
+            下载免安装版 <span class="btn-glyph" aria-hidden="true">↓</span>
+          </a>
+          <a class="btn btn-outline btn-lg" href="downloads/BMCL-2.3.0-source.zip" download>
+            下载源码包 <span class="btn-glyph" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <dl class="hero-meta">
+          <div>
+            <dt>当前版本</dt>
+            <dd>2.3.0</dd>
+          </div>
+          <div>
+            <dt>分发方式</dt>
+            <dd>Windows Portable EXE</dd>
+          </div>
+          <div>
+            <dt>运行环境</dt>
+            <dd>本机 Java</dd>
+          </div>
+        </dl>
+        <p class="hero-note">独立实现，与 PCL2 官方无关。</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="icon-stage">
+          <img class="stage-icon" src="assets/bmcl-icon.png" alt="BMCL 图标" width="512" height="512">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+          <span class="stage-label">fft1145</span>
+        </div>
+        <div class="spec-card">
+          <div class="spec-row"><span>版本</span><b>2.3.0</b></div>
+          <div class="spec-row"><span>平台</span><b>Windows</b></div>
+          <div class="spec-row"><span>安装</span><b>免安装</b></div>
+          <div class="spec-row"><span>更新源</span><b class="spec-green">GitHub</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="signal-bar" aria-label="产品要点">
+    <div class="container signal-inner">
+      <span><i class="signal-dot"></i>完全本地运行</span>
+      <span><i class="signal-dot"></i>无需自建服务器</span>
+      <span><i class="signal-dot"></i>BMCLAPI 国内镜像</span>
+      <span><i class="signal-dot"></i>离线登录</span>
+      <span><i class="signal-dot"></i>白名单更新</span>
+    </div>
+  </div>
+
+  <!-- ====== Features ====== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">01 / 特性</p>
+          <h2>为本地游玩准备的六件事</h2>
+        </div>
+        <p class="section-desc">从下载资源到版本管理，启动器该做的事都在一个界面里，不额外依赖服务端。</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <span class="card-index">01</span>
+          <h3>本地运行</h3>
+          <p>启动器与游戏数据都保存在本机，不需要自建服务器。日常启动已安装的版本时，不依赖任何在线账号系统。</p>
+        </article>
+        <article class="card">
+          <span class="card-index">02</span>
+          <h3>安全更新</h3>
+          <p>从 GitHub 检查更新，仅按白名单覆盖启动器自身文件；存档、模组、版本与游戏资源保持原样，绝不覆盖游戏文件。</p>
+        </article>
+        <article class="card">
+          <span class="card-index">03</span>
+          <h3>崩溃自检</h3>
+          <p>设置页内置崩溃自检，启动失败后可以快速确认是 Java、内存还是游戏文件的问题，不用对着日志猜。</p>
+        </article>
+        <article class="card">
+          <span class="card-index">04</span>
+          <h3>下载检测</h3>
+          <p>设置页提供「下载是否被禁止」检测，帮助排查网络策略或安全软件导致的资源下载失败。</p>
+        </article>
+        <article class="card">
+          <span class="card-index">05</span>
+          <h3>国内镜像</h3>
+          <p>内置 BMCLAPI 国内镜像，加速版本清单与游戏资源的下载，在网络受限的环境下更稳定。</p>
+        </article>
+        <article class="card">
+          <span class="card-index">06</span>
+          <h3>版本管理</h3>
+          <p>浏览版本清单、下载资源、管理已安装版本，并按需分配内存；一个界面完成全部准备工作。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Security ====== -->
+  <section class="section section-dark" id="security">
+    <div class="container">
+      <div class="security-panel">
+        <div class="security-copy">
+          <p class="section-kicker">02 / 更新安全</p>
+          <h2>只动启动器，不动你的游戏</h2>
+          <p class="security-lead">
+            BMCL 从 GitHub 检查新版本。更新过程采用白名单：只替换启动器自身的文件，目录中的存档、模组、整合包与已安装版本不会被写入。
+          </p>
+
+          <ol class="update-flow">
+            <li>
+              <span class="flow-num">1</span>
+              <div><b>检查更新</b><p>从 GitHub 获取启动器的最新版本信息。</p></div>
+            </li>
+            <li>
+              <span class="flow-num">2</span>
+              <div><b>白名单比对</b><p>仅将启动器文件列入覆盖范围，其余目录直接跳过。</p></div>
+            </li>
+            <li>
+              <span class="flow-num">3</span>
+              <div><b>覆盖启动器</b><p>更新完成即可继续使用，游戏文件保持原样。</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="protected">
+          <div class="protected-head">
+            <span class="lock-mark" aria-hidden="true">✓</span>
+            <div>
+              <h3>受保护路径</h3>
+              <p>更新时不会覆盖以下内容</p>
+            </div>
+          </div>
+          <ul class="protected-list">
+            <li><code>saves/</code><span>存档</span></li>
+            <li><code>mods/</code><span>模组</span></li>
+            <li><code>versions/</code><span>版本</span></li>
+            <li><code>libraries/</code><span>依赖库</span></li>
+            <li><code>assets/</code><span>游戏资源</span></li>
+            <li><code>options.txt</code><span>游戏设置</span></li>
+          </ul>
+          <p class="protected-note">以上路径不在更新覆盖范围内。启动器更新与游戏环境互不影响。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Requirements ====== -->
+  <section class="section section-dark" id="requirements">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">03 / 运行要求</p>
+          <h2>准备一份 Java，然后开始</h2>
+        </div>
+        <p class="section-desc">BMCL 不自带 Java，请在本机安装与游戏版本匹配的 Java 运行时。</p>
+      </div>
+
+      <div class="req-grid">
+        <div class="req-card java-card">
+          <h3>Java 版本对照</h3>
+          <div class="table-wrap">
+            <table class="java-table">
+              <thead>
+                <tr><th scope="col">Minecraft 版本</th><th scope="col">需要的 Java</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1.16 及以下</td><td><span class="java-tag">Java 8</span></td></tr>
+                <tr><td>1.17 及以上</td><td><span class="java-tag">Java 17</span></td></tr>
+                <tr><td>1.20.5 及以上</td><td><span class="java-tag java-tag-hi">建议 Java 21</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="req-note">版本越高，对 Java 的要求也越高。装错 Java 是启动失败最常见的原因。</p>
+        </div>
+
+        <div class="req-side">
+          <div class="req-card">
+            <h3>游戏目录</h3>
+            <p>游戏文件默认保存在以下位置：</p>
+            <p class="path-line"><code>%APPDATA%\fft1145\game</code></p>
+            <p class="req-note">更新启动器不会修改这个目录里的任何游戏内容。</p>
+          </div>
+          <div class="req-card">
+            <h3>SmartScreen 提示</h3>
+            <p>
+              portable exe 没有代码签名，首次运行时 Windows 可能显示「Windows 已保护你的电脑」。
+              确认文件来自 GitHub Releases 后，点击「更多信息」→「仍要运行」即可。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Download ====== -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">04 / 下载</p>
+          <h2>获取 BMCL 最新版</h2>
+        </div>
+        <p class="section-desc">Windows 免安装版，双击即用。请同时下载启动器 EXE 与源码包。</p>
+      </div>
+
+      <div class="download-grid">
+        <div class="download-card download-primary">
+          <div class="download-top">
+            <span class="download-label">主下载</span>
+            <span class="download-badge">v2.3.0</span>
+          </div>
+          <h3>启动器本体</h3>
+          <p class="download-file"><code>Better-MC-Launcher.exe</code></p>
+          <p>Windows 便携版启动器，无需安装，双击即用。已接入陶瓦联机。</p>
+          <a class="btn btn-primary btn-block" href="https://github.com/fft1145/BMCL/releases/latest/download/Better-MC-Launcher.exe" target="_blank" rel="noopener">
+            下载 EXE <span class="btn-glyph" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="download-card">
+          <div class="download-top">
+            <span class="download-label">配套文件</span>
+            <span class="download-badge">必下</span>
+          </div>
+          <h3>源码与日志包</h3>
+          <p class="download-file"><code>BMCL-2.3.0-source.zip</code></p>
+          <p>包含完整源码文件夹、更新日志与 SHA256 校验值。</p>
+          <a class="btn btn-outline btn-block" href="downloads/BMCL-2.3.0-source.zip" download>
+            下载源码包 <span class="btn-glyph" aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="download-card">
+          <div class="download-top">
+            <span class="download-label">仓库</span>
+            <span class="download-badge">GitHub</span>
+          </div>
+          <h3>项目主页</h3>
+          <p class="download-file"><code>fft1145/BMCL</code></p>
+          <p>查看提交记录、Issue 与全部历史版本。</p>
+          <a class="btn btn-outline btn-block" href="https://github.com/fft1145/BMCL" target="_blank" rel="noopener">
+            打开仓库 <span class="btn-glyph" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="download-alert" role="note">
+        <span class="download-alert-tag">下载提醒</span>
+        <p><b>EXE 和源码包都需要下载。</b>请把 <code>Better-MC-Launcher.exe</code> 和
+        <code>BMCL-2.3.0-source.zip</code> 两个文件都保存下来；源码包解压后与 EXE 放在同一目录，即可查看完整源码、更新日志和校验值。</p>
+      </div>
+
+      <p class="download-note">
+        提示：EXE 来自 <code>github.com/fft1145/BMCL</code> 的 Releases，请核对来源，不要使用第三方「定制版」。
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ====== 更新日志 ====== -->
+  <section class="section" id="changelog">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">05 / 更新日志</p>
+          <h2>版本更新记录</h2>
+        </div>
+        <p class="section-desc">每次更新都写清楚改了什么，从最新版本往前翻阅。</p>
+      </div>
+
+      <div class="changelog">
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.3.0</b><span>2026-11-13</span></div>
+          <ul>
+            <li><b>崩溃自动分析：</b>游戏异常退出后自动跑一遍本地诊断，右下角弹窗直接列出可能原因（模组冲突、内存不足、Java 版本不对等），一键可以交给 AI 继续分析。</li>
+            <li><b>内置 DeepSeek AI 助手：</b>「增强 → AI 助手」里直接聊，模组冲突、崩溃日志、Java 版本问题都能问。API Key 自己填，只保存在本机，不上传。</li>
+            <li><b>Java 环境目录：</b>只需要指定「放 Java 的目录」，自动递归找出目录下所有 Java 本体，读出版本、位数和发行商；启动时按游戏版本需要自动挑，不用再手填 java.exe。</li>
+            <li><b>外观自定义：</b>5 套主题预设（默认 / 午夜黑 / 深海蓝 / 樱花粉 / 森野绿）+ 自定义配色 + 自定义 CSS。改样式不动核心代码。</li>
+            <li><b>自定义背景：</b>支持静态图片和视频动态壁纸，可调暗化与模糊。</li>
+            <li><b>内置音乐播放器：</b>直接搜索 B 站音源播放，支持播放列表、上一首 / 下一首和音量记忆。</li>
+            <li><b>皮肤与披风：</b>新增 3D 皮肤模型，可拖动旋转；登录后头像改成用自己皮肤裁出的大头照；支持更换皮肤 / 披风，并记录换过的每一套。</li>
+          </ul>
+        </article>
+
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.2.6</b><span>2026-11-12</span></div>
+          <ul>
+            <li><b>微软正版登录：</b>修复 Xbox Live 认证缺少 <code>RelyingParty</code> 字段导致的 <code>HTTP 400</code>，浏览器显示「大功告成」后可以正常走完 Xbox → XSTS → Minecraft 档案。登录失败的提示现在会带上具体接口，方便定位。</li>
+            <li><b>版本隔离：</b>设置 → 启动 → 版本隔离已经生效。选择「隔离所有实例」后，<code>mods</code>、<code>saves</code>、<code>config</code>、<code>logs</code>、<code>resourcepacks</code> 等全部读写 <code>.minecraft\versions\&lt;版本&gt;\</code> 下的目录，不再是根目录。</li>
+            <li><b>更新备用线路：</b>GitHub 直连失败时自动依次切换 GitHub Raw → gh-proxy → ghproxy.net；设置 → 软件更新新增「备用线路」按钮，可手动强制走镜像，并显示本次使用的线路。</li>
+            <li><b>联机入口：</b>顶部导航新增「联机」按钮，点一下直接进入陶瓦联机大厅，不用再进工具页找。</li>
+          </ul>
+        </article>
+
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.2.5</b><span>2026-11-07</span></div>
+          <ul>
+            <li><b>陶瓦联机：</b>联机功能接入陶瓦联机（Terracotta）。加入时输入大厅编号即可建立 P2P 连接；创建时填写游戏「对局域网开放」的端口生成编号。首次使用会自动下载 EasyTier 联机组件（约 30 MB），之后无需重复下载，支持复制编号与一键断开。</li>
+            <li><b>窗口标题：</b>启动器窗口标题统一显示为 <code>BMCL</code>，不再显示项目代号。</li>
+            <li><b>下载方式：</b>官网同时提供启动器 EXE 与源码包，请把两个文件都下载下来。</li>
+          </ul>
+        </article>
+
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.2.4</b><span>2026-11-07</span></div>
+          <ul>
+            <li><b>版本检测：</b>支持玩家自定义版本文件夹，可直接选择 <code>.minecraft</code>、<code>versions</code> 目录或单个版本文件夹，启动器会自动归一到游戏根目录。</li>
+            <li><b>Java 检测：</b>设置里可以填写 Java 安装目录，会自动到 <code>...\bin\</code> 下查找 java；填写 <code>java.exe</code> 或留空也可正常识别。</li>
+            <li><b>启动修复：</b>修复 Fabric 因 classpath 中存在重复 ASM 类而导致的启动崩溃，合并继承版本时按 <code>group:artifact</code> 去重并保留子版本。</li>
+          </ul>
+        </article>
+
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.1.1</b><span>2026-11-03</span></div>
+          <ul>
+            <li><b>PCL CE 界面重制：</b>按 PCL2 CE 源码（FormMain.xaml / PageLaunchLeft.xaml）转译标题栏与启动页，标题栏改为 48px 高、纯 <code>#1370f3</code> 主色，使用 PCL 原版字母 Logo（白色描边 2.2）与白底 CE 角标。</li>
+            <li><b>配色对齐：</b>全部取自 PCL CE 的资源字典，主色 <code>#1370f3</code>、深色 <code>#0b5bcb</code>、浅色 <code>#4890f5</code>、面板 <code>#eaf2fe</code>，不再使用近似色。</li>
+            <li><b>顶部选项卡：</b>改为 PCL 的 27px 高胶囊按钮（圆角 13.5px、半透明白底），选中态为白底 + 主色文字，间距与 PCL 一致。</li>
+            <li><b>启动页左侧栏：</b>固定 300px 宽，半透明白 + 背景模糊，账号头像 64px，启动按钮 54px 高、圆角 3px、带主色投影，版本名随按钮内嵌显示。</li>
+            <li><b>右侧内容区：</b>按 PCL 的 25px 内边距与 5px 圆角卡片重排，提示卡、运行日志卡改为白色卡片 + 柔和阴影，正文 13.5px、行高 1.75。</li>
+            <li><b>窗口按钮：</b>改为 PCL 的 28×28 图标按钮，右边距 12px / 44px，关闭键悬停变红。</li>
+            <li><b>兼容性：</b>新增独立皮肤文件 <code>pcl-skin.css</code>，只在 PCL 主题下生效，BMCL 主题外观与全部功能不受影响；BMCL 主题下自动隐藏 PCL 字母 Logo，避免标题栏出现重复标识；72 项单元测试全部通过。</li>
+          </ul>
+        </article>
+
+        <article class="changelog-item">
+          <div class="changelog-ver"><b>v2.1.0</b><span>2026-11-03</span></div>
+          <ul>
+            <li><b>OptiFine 安装：</b>接入 BMCLAPI 版本列表，自动下载官方安装器并执行 <code>--installClient</code>，装好后自动识别新版本并设为当前实例。</li>
+            <li><b>账号面板联动：</b>「更多」页的服务账号、资料修改按钮会先切回启动页再展开账号面板；添加或切换账号时同步 <code>playerName</code>，设置页与启动页名字保持一致。</li>
+            <li><b>原版下载：</b>移除 120 条版本上限，分页加载全部 921 个版本。</li>
+            <li><b>社区资源：</b>默认源改为 Modrinth，修复强制版本过滤导致空列表的问题，CurseForge 失败时自动回退。</li>
+            <li><b>构建：</b>固定产物名为 <code>Better-MC-Launcher.exe</code>，Windows 便携版由 GitHub Actions 自动产出。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="section section-dark" id="faq">
+    <div class="container faq-wrap">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">06 / FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <p class="section-desc">关于运行方式、更新与安全提示。</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>BMCL 需要自建服务器或联网吗？</summary>
+          <div class="faq-body">
+            <p>不需要自建服务器。启动器与游戏都完全运行在本地，日常启动已安装的版本不依赖在线服务。首次下载版本清单与游戏资源时需要网络，可借助内置的 BMCLAPI 国内镜像加速；之后可以使用离线登录进入游戏。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>更新会覆盖我的存档或模组吗？</summary>
+          <div class="faq-body">
+            <p>不会。更新只覆盖启动器自身文件，并采用白名单机制。<code>saves/</code>、<code>mods/</code>、<code>versions/</code>、<code>libraries/</code>、<code>assets/</code> 与 <code>options.txt</code> 都在保护范围内，绝不覆盖游戏文件。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>启动失败或提示 Java 不对怎么办？</summary>
+          <div class="faq-body">
+            <p>确认本机已安装对应 Java：1.16 及以下用 Java 8，1.17 及以上用 Java 17，1.20.5 及以上建议 Java 21。也可以在设置页使用内置的崩溃自检，逐项确认 Java、内存与游戏文件状态；如果资源下载失败，再运行一次「下载是否被禁止」检测。</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Windows 提示「已保护你的电脑」是病毒吗？</summary>
+          <div class="faq-body">
+            <p>这是 SmartScreen 对未签名 portable exe 的常规提示。确认文件来自 GitHub Releases 后，点击「更多信息」→「仍要运行」即可。BMCL 在爱发电发布，不提供任何「定制版」，请以上方 GitHub 与 FFT 主站链接为准。</p>
+          </div>
+        </details>
+      </div>
+
+      <p style="margin-top:18px;font-size:14px"><a href="https://fgame-faq26.netlify.app" target="_blank" rel="noopener">更多问题请访问统一 FAQ 中心 →</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====== Footer ====== -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-row">
+        <img src="assets/bmcl-icon.png" alt="BMCL 图标" width="48" height="48">
+        <div>
+          <p class="footer-wordmark">BMCL</p>
+          <p class="footer-sub">FFT STUDIO</p>
+        </div>
+      </div>
+      <p class="footer-tag">本地运行的 Minecraft 启动器<br>项目代号 fft1145 · 版本 2.3.0</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>本页</h4>
+      <ul class="footer-links">
+        <li><a href="#overview">概览</a></li>
+        <li><a href="#features">特性</a></li>
+        <li><a href="#security">更新安全</a></li>
+        <li><a href="#requirements">运行要求</a></li>
+        <li><a href="#download">下载</a></li>
+        <li><a href="#changelog">更新日志</a></li>
+        <li><a href="https://fgame-faq26.netlify.app" target="_blank" rel="noopener">常见问题</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>获取 BMCL</h4>
+      <ul class="footer-links footer-links-single">
+        <li><a href="https://github.com/fft1145/BMCL/releases/latest" target="_blank" rel="noopener">GitHub Releases</a></li>
+        <li><a href="downloads/BMCL-2.3.0-source.zip" target="_blank" rel="noopener">源码包 2.3.0</a></li>
+        <li><a href="https://github.com/fft1145/BMCL" target="_blank" rel="noopener">GitHub 仓库</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FFT STUDIO</h4>
+      <ul class="footer-links footer-links-single">
+        <li><a href="https://fgame12.netlify.app" target="_blank" rel="noopener">主站 fgame12.netlify.app</a></li>
+        <li><a href="https://qm.qq.com/q/TTSlgwGVuC" target="_blank" rel="noopener">QQ 群</a></li>
+        <li><a href="https://github.com/fft1145/BMCL" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 FFT STUDIO · BMCL 2.3.0</p>
+      <p class="footer-legal">BMCL 由 FFT STUDIO 在爱发电发布。Minecraft 是 Mojang Studios 的商标，本站与 Mojang 无关。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
